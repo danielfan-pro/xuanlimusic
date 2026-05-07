@@ -5,6 +5,7 @@ import { useLanguage } from "@/components/language-provider";
 
 export default function Footer() {
   const { t } = useLanguage();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="border-t border-[color:var(--line)] bg-[color:var(--surface-soft)]">
@@ -12,6 +13,9 @@ export default function Footer() {
         <div>
           <p className="font-heading text-2xl text-[color:var(--navy)]">Xuanli Music</p>
           <p className="mt-2 max-w-xl">{t.footer.text}</p>
+          <p className="mt-3 text-xs uppercase tracking-[0.16em] text-[color:var(--muted)]">
+            {`© ${currentYear} Xuanli Music. All rights reserved.`}
+          </p>
         </div>
         <div className="flex gap-5 uppercase tracking-[0.18em]">
           <Link href="/about">{t.nav.about}</Link>

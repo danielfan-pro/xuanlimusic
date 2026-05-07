@@ -21,6 +21,7 @@ export default function Header() {
 
   useEffect(() => {
     setMenuOpen(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
   }, [pathname]);
 
   return (
@@ -31,7 +32,6 @@ export default function Header() {
             XM
           </div>
           <div>
-            <p className="font-heading text-2xl text-[color:var(--navy)]">Xuanli Music</p>
             <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted)]">
               Strings & Piano Studio
             </p>
