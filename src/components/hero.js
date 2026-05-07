@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="mt-8 flex flex-wrap gap-4">
             <Link
               href="/teachers"
-              className="rounded-full bg-[color:var(--navy)] px-6 py-3 text-sm uppercase tracking-[0.18em] text-white transition hover:-translate-y-0.5"
+              className="rounded-full bg-[color:var(--navy)] px-6 py-3 text-sm font-semibold uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5"
             >
               {t.hero.primaryCta}
             </Link>
