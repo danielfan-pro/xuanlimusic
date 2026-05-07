@@ -19,6 +19,11 @@ export default function Header() {
   const { language, setLanguage, t } = useLanguage();
   const [menuOpen, setMenuOpen] = useState(false);
 
+  function handleNavClick() {
+    setMenuOpen(false);
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }
+
   useEffect(() => {
     setMenuOpen(false);
     window.scrollTo({ top: 0, left: 0, behavior: "auto" });
@@ -45,6 +50,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={handleNavClick}
                 className={`text-sm tracking-[0.18em] transition ${
                   active ? "text-[color:var(--navy)]" : "text-[color:var(--muted)] hover:text-[color:var(--navy)]"
                 }`}
@@ -119,6 +125,7 @@ export default function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  onClick={handleNavClick}
                   className={`rounded-2xl px-4 py-3 text-sm uppercase tracking-[0.18em] transition ${
                     active
                       ? "bg-[color:var(--navy)] !text-white"
