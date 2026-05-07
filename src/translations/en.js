@@ -59,7 +59,7 @@ const en = {
     profiles: [
       {
         instrument: "Strings",
-        name: "Professor Xu",
+        name: "Professor Yanming Xu",
         credentials: [
           "Retired university professor",
           "Specialist in violin, viola, and string pedagogy",
@@ -70,10 +70,10 @@ const en = {
       },
       {
         instrument: "Piano",
-        name: "Professor Li",
+        name: "Professor Wei Li",
         credentials: [
           "Retired university professor",
-          "Piano teacher with recital and jury preparation experience",
+          "Piano teacher with recital and grading preparation experience",
           "Experienced mentor for developing young musicians",
         ],
         bio:

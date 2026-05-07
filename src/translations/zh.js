@@ -56,7 +56,7 @@ const zh = {
     profiles: [
       {
         instrument: "弦乐",
-        name: "许教授",
+        name: "许燕明教授",
         credentials: [
           "退休大学教授",
           "专注于小提琴、中提琴演奏与弦乐教学法",
@@ -67,7 +67,7 @@ const zh = {
       },
       {
         instrument: "钢琴",
-        name: "李教授",
+        name: "李巍教授",
         credentials: [
           "退休大学教授",
           "具备音乐会与考级准备经验的钢琴教师",

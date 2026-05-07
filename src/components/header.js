@@ -48,18 +48,38 @@ export default function Header() {
           })}
         </nav>
 
-        <button
-          type="button"
-          aria-label="Toggle language"
-          onClick={() => setLanguage(language === "en" ? "zh" : "en")}
-          className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] bg-white/80 px-4 py-2 text-sm text-[color:var(--navy)] shadow-sm transition hover:-translate-y-0.5"
+        <div
+          className="inline-flex items-center rounded-full border border-[color:var(--line)] bg-white/80 p-1 shadow-sm"
+          aria-label="Language selector"
+          role="group"
         >
-          <span aria-hidden="true">🇺🇸</span>
-          <span className={language === "en" ? "font-semibold" : "opacity-65"}>EN</span>
-          <span className="opacity-40">|</span>
-          <span aria-hidden="true">🇨🇳</span>
-          <span className={language === "zh" ? "font-semibold" : "opacity-65"}>中文</span>
-        </button>
+          <button
+            type="button"
+            onClick={() => setLanguage("en")}
+            className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm transition ${
+              language === "en"
+                ? "bg-[color:var(--navy)] !text-white"
+                : "text-[color:var(--navy)] hover:bg-[rgba(18,49,79,0.06)]"
+            }`}
+            aria-pressed={language === "en"}
+          >
+            <span aria-hidden="true">🇺🇸</span>
+            <span className="font-medium">EN</span>
+          </button>
+          <button
+            type="button"
+            onClick={() => setLanguage("zh")}
+            className={`inline-flex items-center gap-2 rounded-full px-3 py-2 text-sm transition ${
+              language === "zh"
+                ? "bg-[color:var(--navy)] !text-white"
+                : "text-[color:var(--navy)] hover:bg-[rgba(18,49,79,0.06)]"
+            }`}
+            aria-pressed={language === "zh"}
+          >
+            <span aria-hidden="true">🇨🇳</span>
+            <span className="font-medium">中文</span>
+          </button>
+        </div>
       </div>
     </header>
   );
