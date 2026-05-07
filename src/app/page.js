@@ -21,16 +21,18 @@ export default function HomePage() {
           <SectionReveal
             key={item.href}
             delay={index * 120}
-            className="rounded-[1.8rem] border border-[color:var(--line)] bg-white/82 p-8 shadow-[0_22px_60px_rgba(18,49,79,0.08)]"
+            className="flex h-full flex-col rounded-[1.8rem] border border-[color:var(--line)] bg-white/82 p-8 shadow-[0_22px_60px_rgba(18,49,79,0.08)]"
           >
             <h2 className="font-heading text-4xl text-[color:var(--navy)]">{item.title}</h2>
             <p className="mt-5 text-base leading-8 text-[color:var(--muted)]">{item.text}</p>
-            <Link
-              href={item.href}
-              className="mt-7 inline-flex rounded-full border border-[color:var(--line)] px-5 py-3 text-sm uppercase tracking-[0.18em] text-[color:var(--navy)] transition hover:-translate-y-0.5"
-            >
-              Explore
-            </Link>
+            <div className="mt-auto pt-10">
+              <Link
+                href={item.href}
+                className="inline-flex rounded-full border border-[color:var(--line)] px-5 py-3 text-sm uppercase tracking-[0.18em] text-[color:var(--navy)] transition hover:-translate-y-0.5"
+              >
+                {t.common.explore}
+              </Link>
+            </div>
           </SectionReveal>
         ))}
       </section>

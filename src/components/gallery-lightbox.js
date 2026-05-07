@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { useLanguage } from "@/components/language-provider";
 import SectionReveal from "@/components/section-reveal";
 
 export default function GalleryLightbox({ items }) {
+  const { t } = useLanguage();
   const [activeIndex, setActiveIndex] = useState(null);
 
   const activeItem = activeIndex === null ? null : items[activeIndex];
@@ -20,7 +22,7 @@ export default function GalleryLightbox({ items }) {
             >
               <div className="flex h-64 items-end bg-[linear-gradient(160deg,rgba(154,198,228,0.55),rgba(18,49,79,0.22))] p-6">
                 <div className="rounded-full border border-white/65 bg-white/80 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--navy)]">
-                  Photo
+                  {t.recitals.photoLabel}
                 </div>
               </div>
               <div className="p-6">
@@ -45,13 +47,13 @@ export default function GalleryLightbox({ items }) {
                 onClick={() => setActiveIndex(null)}
                 className="rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--navy)]"
               >
-                Close
+                {t.recitals.closeLabel}
               </button>
             </div>
             <div className="grid gap-6 p-6 lg:grid-cols-[1.1fr_0.9fr] lg:p-8">
               <div className="min-h-[26rem] rounded-[1.6rem] bg-[linear-gradient(160deg,rgba(154,198,228,0.65),rgba(18,49,79,0.24))]" />
               <div className="flex flex-col justify-center">
-                <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">Recital Memory</p>
+                <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">{t.recitals.memoryLabel}</p>
                 <p className="mt-5 text-lg leading-8 text-[color:var(--muted)]">{activeItem.caption}</p>
               </div>
             </div>

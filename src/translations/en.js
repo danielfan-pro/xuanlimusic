@@ -1,5 +1,8 @@
 const en = {
   languageLabel: "EN",
+  common: {
+    explore: "Explore",
+  },
   nav: {
     home: "Home",
     about: "About",
@@ -9,18 +12,23 @@ const en = {
     contact: "Contact",
   },
   hero: {
-    eyebrow: "Private violin and piano instruction",
+    eyebrow: "Private strings and piano instruction",
     title: "Xuanli Music",
     subtitle:
       "A refined studio for thoughtful music study, guided by two retired professors who bring warmth, rigor, and artistry to every lesson.",
     primaryCta: "Meet the Teachers",
     secondaryCta: "View Recitals",
+    mark: "Studio Mark",
+    since: "Since 2023",
     highlights: [
       "Classical training rooted in academic excellence",
       "Individualized lessons for dedicated students",
       "A welcoming path toward recitals, auditions, and lifelong musicianship",
     ],
     logo: "Logo Placeholder",
+    studioCardTitle: "Xuanli Music Studio",
+    studioCardText:
+      "Strings, piano, recital preparation, audition guidance, and a thoughtful path for serious study.",
   },
   about: {
     title: "About the Studio",
@@ -50,26 +58,26 @@ const en = {
       "Two experienced educators, one studio, and a shared commitment to serious yet nurturing music instruction.",
     profiles: [
       {
-        instrument: "Violin",
-        name: "Professor Chen",
+        instrument: "Strings",
+        name: "Professor Xu",
         credentials: [
           "Retired university professor",
-          "Specialist in violin performance and pedagogy",
-          "Decades of private and collegiate teaching",
+          "Specialist in violin, viola, and string pedagogy",
+          "Approximately forty years of private and collegiate teaching experience",
         ],
         bio:
-          "Professor Chen guides violin students with patience, precision, and a strong foundation in classical technique. His teaching emphasizes tone production, musical phrasing, and confident performance habits.",
+          "Professor Xu guides violin and viola students with patience, precision, and a strong foundation in classical technique. His teaching emphasizes tone production, musical phrasing, and confident performance habits.",
       },
       {
         instrument: "Piano",
-        name: "Professor Lin",
+        name: "Professor Li",
         credentials: [
           "Retired university professor",
           "Piano teacher with recital and jury preparation experience",
           "Experienced mentor for developing young musicians",
         ],
         bio:
-          "Professor Lin combines technical clarity with expressive musicianship, helping piano students build fluency, discipline, and artistic sensitivity through a warm and structured approach.",
+          "Professor Li combines technical clarity with expressive musicianship, helping piano students build fluency, discipline, and artistic sensitivity through a warm and structured approach.",
       },
     ],
   },
@@ -79,20 +87,22 @@ const en = {
       "Studio performances celebrate preparation, growth, and the joy of sharing music with family and community.",
     upcomingTitle: "Upcoming Recitals",
     pastTitle: "Past Recitals",
+    upcomingEventLabel: "Upcoming Event",
+    dateLabel: "Date",
+    timeLabel: "Time",
+    addressLabel: "Address",
+    posterPlaceholder: "Poster Placeholder",
+    photoLabel: "Photo",
+    memoryLabel: "Recital Memory",
+    closeLabel: "Close",
     upcoming: [
       {
-        title: "Spring Studio Recital",
-        date: "Saturday, June 20, 2026",
-        time: "3:00 PM",
-        address: "123 Harmony Lane, New York, NY 10001",
-        mapTitle: "Map for Spring Studio Recital",
-      },
-      {
-        title: "Summer Honors Showcase",
-        date: "Sunday, August 16, 2026",
-        time: "2:30 PM",
-        address: "456 Conservatory Avenue, New York, NY 10011",
-        mapTitle: "Map for Summer Honors Showcase",
+        title: "Summer Studio Recital",
+        date: "Sunday, June 7, 2026",
+        time: "5:00 PM",
+        venue: "Powers Music School",
+        addressLine: "160 Lexington St, Belmont, MA 02478",
+        mapTitle: "Map for Summer Studio Recital",
       },
     ],
     gallery: [
@@ -148,13 +158,13 @@ const en = {
   contact: {
     title: "Contact",
     intro:
-      "We welcome inquiries from prospective students and families interested in violin or piano study.",
+      "We welcome inquiries from prospective students and families interested in strings or piano study.",
     phoneLabel: "Phone",
     emailLabel: "Email",
     addressLabel: "Address",
     phone: "(555) 123-4567",
     email: "hello@xuanlimusic.com",
-    address: "789 Sonata Court, Suite 200, New York, NY 10019",
+    address: "Woburn, MA",
     formTitle: "Send a Message",
     formNote: "This form is currently a visual placeholder and does not submit yet.",
     fields: {
@@ -165,7 +175,7 @@ const en = {
     },
   },
   footer: {
-    text: "Private violin and piano lessons with academic depth and personal care.",
+    text: "Private strings and piano lessons with academic depth and personal care.",
   },
 };
 

@@ -14,9 +14,9 @@ export default function Footer() {
           <p className="mt-2 max-w-xl">{t.footer.text}</p>
         </div>
         <div className="flex gap-5 uppercase tracking-[0.18em]">
-          <Link href="/about">About</Link>
-          <Link href="/teachers">Teachers</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/about">{t.nav.about}</Link>
+          <Link href="/teachers">{t.nav.teachers}</Link>
+          <Link href="/contact">{t.nav.contact}</Link>
         </div>
       </div>
     </footer>

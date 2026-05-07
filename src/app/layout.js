@@ -4,7 +4,7 @@ import PageShell from "@/components/page-shell";
 
 export const metadata = {
   title: "Xuanli Music",
-  description: "Private violin and piano studio with a classic, elegant bilingual website shell.",
+  description: "Private strings and piano studio with a classic, elegant bilingual website shell.",
 };
 
 export default function RootLayout({ children }) {

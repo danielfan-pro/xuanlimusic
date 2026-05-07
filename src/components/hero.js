@@ -50,17 +50,15 @@ export default function Hero() {
             <div className="relative rounded-[2rem] border border-dashed border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(244,249,252,0.95),rgba(255,251,241,0.95))] p-10">
               <div className="flex min-h-[27rem] flex-col justify-between">
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-[color:var(--muted)]">
-                  <span>Studio Mark</span>
-                  <span>Since 2026</span>
+                  <span>{t.hero.mark}</span>
+                  <span>{t.hero.since}</span>
                 </div>
                 <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[color:var(--line)] bg-white/90 font-heading text-center text-3xl text-[color:var(--navy)] shadow-inner">
                   {t.hero.logo}
                 </div>
                 <div className="grid gap-4 rounded-[1.5rem] bg-[color:var(--surface-soft)] p-6">
-                  <p className="font-heading text-2xl text-[color:var(--navy)]">Xuanli Music Studio</p>
-                  <p className="text-sm leading-7 text-[color:var(--muted)]">
-                    Violin, piano, recital preparation, audition guidance, and a thoughtful path for serious study.
-                  </p>
+                  <p className="font-heading text-2xl text-[color:var(--navy)]">{t.hero.studioCardTitle}</p>
+                  <p className="text-sm leading-7 text-[color:var(--muted)]">{t.hero.studioCardText}</p>
                 </div>
               </div>
             </div>

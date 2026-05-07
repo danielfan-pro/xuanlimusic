@@ -1,12 +1,16 @@
 "use client";
 
 import SectionReveal from "@/components/section-reveal";
+import { useLanguage } from "@/components/language-provider";
 
-function buildMapUrl(address) {
+function buildMapUrl(venue, addressLine) {
+  const address = [venue, addressLine].filter(Boolean).join(", ");
   return `https://www.google.com/maps?q=${encodeURIComponent(address)}&output=embed`;
 }
 
 export default function RecitalCard({ recital, index }) {
+  const { t } = useLanguage();
+
   return (
     <SectionReveal
       delay={index * 140}
@@ -15,29 +19,33 @@ export default function RecitalCard({ recital, index }) {
       <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
         <div className="flex min-h-[22rem] items-center justify-center bg-[linear-gradient(180deg,rgba(18,49,79,0.16),rgba(154,198,228,0.45))] p-8">
           <div className="flex h-full min-h-[18rem] w-full items-center justify-center rounded-[1.7rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.9),rgba(245,248,250,0.7))] p-8 text-center font-heading text-3xl text-[color:var(--navy)]">
-            Poster Placeholder
+            {t.recitals.posterPlaceholder}
           </div>
         </div>
         <div className="grid gap-6 p-8 lg:p-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">Upcoming Event</p>
+            <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">{t.recitals.upcomingEventLabel}</p>
             <h3 className="mt-3 font-heading text-4xl text-[color:var(--navy)]">{recital.title}</h3>
           </div>
           <div className="grid gap-3 text-[color:var(--muted)]">
             <p>
-              <span className="font-semibold text-[color:var(--navy)]">Date:</span> {recital.date}
+              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.dateLabel}:</span> {recital.date}
             </p>
             <p>
-              <span className="font-semibold text-[color:var(--navy)]">Time:</span> {recital.time}
+              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.timeLabel}:</span> {recital.time}
             </p>
-            <p>
-              <span className="font-semibold text-[color:var(--navy)]">Address:</span> {recital.address}
-            </p>
+            <div>
+              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.addressLabel}:</span>
+              <div className="mt-1 leading-7">
+                <p>{recital.venue}</p>
+                <p>{recital.addressLine}</p>
+              </div>
+            </div>
           </div>
           <div className="overflow-hidden rounded-[1.5rem] border border-[color:var(--line)]">
             <iframe
               title={recital.mapTitle}
-              src={buildMapUrl(recital.address)}
+              src={buildMapUrl(recital.venue, recital.addressLine)}
               className="h-72 w-full"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

@@ -26,7 +26,7 @@ export default function Header() {
           <div>
             <p className="font-heading text-2xl text-[color:var(--navy)]">Xuanli Music</p>
             <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted)]">
-              Violin & Piano Studio
+              Strings & Piano Studio
             </p>
           </div>
         </Link>
