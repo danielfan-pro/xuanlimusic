@@ -1,0 +1,167 @@
+const zh = {
+  languageLabel: "中文",
+  nav: {
+    home: "首页",
+    about: "关于我们",
+    teachers: "教师介绍",
+    recitals: "音乐会",
+    achievements: "学生成果",
+    contact: "联系我们",
+  },
+  hero: {
+    eyebrow: "私人小提琴与钢琴课程",
+    title: "Xuanli Music",
+    subtitle:
+      "由两位退休教授创办的音乐工作室，以温暖、严谨与艺术性陪伴学生成长，提供细致而高质量的音乐教育。",
+    primaryCta: "认识老师",
+    secondaryCta: "查看音乐会",
+    highlights: [
+      "以学术背景与古典训练为基础",
+      "为认真学习的学生提供个性化指导",
+      "帮助学生迈向音乐会、面试与终身音乐素养",
+    ],
+    logo: "Logo 占位区",
+  },
+  about: {
+    title: "关于工作室",
+    intro: "Xuanli Music 提供安静、专注而富有温度的学习环境，让学生在纪律、好奇心与喜悦中成长。",
+    philosophyTitle: "使命与理念",
+    philosophy:
+      "我们重视聆听能力、扎实技巧、音乐想象力，以及长期稳定的发展。课程会根据每位学生的特点调整，同时保持古典音乐学习应有的严谨与美感。",
+    values: [
+      {
+        title: "学术性",
+        text: "多年高校教学经验所沉淀的教育理念、系统方法与高标准艺术要求。",
+      },
+      {
+        title: "关怀",
+        text: "以个人化指导支持学生建立信心、保持练习习惯，并持续热爱音乐。",
+      },
+      {
+        title: "技艺",
+        text: "在技巧、诠释、舞台准备与表达力之间取得平衡，培养完整音乐素养。",
+      },
+    ],
+  },
+  teachers: {
+    title: "教师介绍",
+    intro: "两位经验丰富的教育者，共同坚持严谨而温和的音乐教学理念。",
+    profiles: [
+      {
+        instrument: "小提琴",
+        name: "陈教授",
+        credentials: [
+          "退休大学教授",
+          "专注于小提琴演奏与教学法",
+          "拥有数十年私人及高校教学经验",
+        ],
+        bio:
+          "陈教授以耐心、精准与扎实基础指导小提琴学生，重视音色塑造、乐句表达与稳定自信的演奏习惯。",
+      },
+      {
+        instrument: "钢琴",
+        name: "林教授",
+        credentials: [
+          "退休大学教授",
+          "具备音乐会与考级准备经验的钢琴教师",
+          "长期指导青少年音乐学习与成长",
+        ],
+        bio:
+          "林教授以清晰的技术训练和细腻的音乐表达相结合，帮助钢琴学生建立流畅度、自律性与艺术感受力。",
+      },
+    ],
+  },
+  recitals: {
+    title: "音乐会",
+    intro: "工作室音乐会记录了准备过程、学习成长，以及与家人和社区分享音乐的喜悦。",
+    upcomingTitle: "即将举行的音乐会",
+    pastTitle: "往期音乐会",
+    upcoming: [
+      {
+        title: "春季学生音乐会",
+        date: "2026年6月20日 星期六",
+        time: "下午 3:00",
+        address: "123 Harmony Lane, New York, NY 10001",
+        mapTitle: "春季学生音乐会地图",
+      },
+      {
+        title: "夏季荣誉展示音乐会",
+        date: "2026年8月16日 星期日",
+        time: "下午 2:30",
+        address: "456 Conservatory Avenue, New York, NY 10011",
+        mapTitle: "夏季荣誉展示音乐会地图",
+      },
+    ],
+    gallery: [
+      {
+        title: "冬季音乐会谢幕",
+        caption: "学生们在季节音乐会结束后合影留念。",
+      },
+      {
+        title: "钢琴独奏时刻",
+        caption: "年轻钢琴学生以专注与从容完成演出。",
+      },
+      {
+        title: "小提琴合奏片段",
+        caption: "工作室小提琴学生共同呈现室内乐式编排。",
+      },
+      {
+        title: "家庭招待时光",
+        caption: "音乐会结束后与家人朋友的温馨交流。",
+      },
+      {
+        title: "特别表彰",
+        caption: "为持续努力与明显进步的学生颁发鼓励奖项。",
+      },
+      {
+        title: "后台准备",
+        caption: "上台前安静而专注的准备瞬间。",
+      },
+    ],
+  },
+  achievements: {
+    title: "学生成果",
+    intro: "无论是第一次登台还是重要比赛与面试录取，我们都珍视每一个成长里程碑。",
+    items: [
+      {
+        title: "比赛获奖",
+        detail: "占位学生在地区青少年音乐比赛中获得优异名次。",
+      },
+      {
+        title: "青年乐团录取",
+        detail: "占位学生成功进入本地选拔性青年乐团项目。",
+      },
+      {
+        title: "考级优秀",
+        detail: "占位学生在正式音乐演奏评估中取得高分成绩。",
+      },
+      {
+        title: "艺术荣誉表彰",
+        detail: "占位学生因学校音乐表现与领导力受到表彰。",
+      },
+    ],
+  },
+  contact: {
+    title: "联系我们",
+    intro: "欢迎有意学习小提琴或钢琴的学生与家庭与我们联系。",
+    phoneLabel: "电话",
+    emailLabel: "邮箱",
+    addressLabel: "地址",
+    phone: "(555) 123-4567",
+    email: "hello@xuanlimusic.com",
+    address: "789 Sonata Court, Suite 200, New York, NY 10019",
+    formTitle: "发送消息",
+    formNote: "此表单目前仅为页面展示，占位用途，暂不提交。",
+    fields: {
+      name: "姓名",
+      email: "邮箱",
+      message: "留言",
+      submit: "发送咨询",
+    },
+  },
+  footer: {
+    text: "以学术底蕴与个别关怀提供私人小提琴和钢琴课程。",
+  },
+};
+
+export default zh;
