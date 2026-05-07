@@ -91,6 +91,9 @@ const zh = {
     photoLabel: "照片",
     memoryLabel: "音乐会回忆",
     closeLabel: "关闭",
+    homeFeatureTitle: "主页精选音乐会",
+    homeFeatureText: "欢迎参加这场温馨而正式的学生音乐会，诚挚邀请家人和朋友一同前来欣赏演出。",
+    homeFeatureCta: "查看音乐会详情",
     upcoming: [
       {
         title: "夏季学生音乐会",
@@ -99,6 +102,7 @@ const zh = {
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
         mapTitle: "夏季学生音乐会地图",
+        hideAfter: "2026-06-08T00:00:00-04:00",
       },
     ],
     gallery: [

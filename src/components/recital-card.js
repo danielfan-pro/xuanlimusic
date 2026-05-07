@@ -24,19 +24,20 @@ export default function RecitalCard({ recital, index }) {
         </div>
         <div className="grid gap-6 p-8 lg:p-10">
           <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">{t.recitals.upcomingEventLabel}</p>
-            <h3 className="mt-3 font-heading text-4xl text-[color:var(--navy)]">{recital.title}</h3>
+            <h3 className="font-heading text-4xl text-[color:var(--navy)]">{recital.title}</h3>
           </div>
           <div className="grid gap-3 text-[color:var(--muted)]">
-            <p>
-              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.dateLabel}:</span> {recital.date}
-            </p>
-            <p>
-              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.timeLabel}:</span> {recital.time}
-            </p>
-            <div>
-              <span className="font-semibold text-[color:var(--navy)]">{t.recitals.addressLabel}:</span>
-              <div className="mt-1 leading-7">
+            <div className="grid grid-cols-[8.5rem_1fr] items-start gap-x-2">
+              <span className="font-semibold leading-7 text-[color:var(--navy)]">{t.recitals.dateLabel}:</span>
+              <p className="leading-7">{recital.date}</p>
+            </div>
+            <div className="grid grid-cols-[8.5rem_1fr] items-start gap-x-2">
+              <span className="font-semibold leading-7 text-[color:var(--navy)]">{t.recitals.timeLabel}:</span>
+              <p className="leading-7">{recital.time}</p>
+            </div>
+            <div className="grid grid-cols-[8.5rem_1fr] items-start gap-x-2">
+              <span className="font-semibold leading-7 text-[color:var(--navy)]">{t.recitals.addressLabel}:</span>
+              <div className="leading-7">
                 <p>{recital.venue}</p>
                 <p>{recital.addressLine}</p>
               </div>

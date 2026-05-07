@@ -95,6 +95,10 @@ const en = {
     photoLabel: "Photo",
     memoryLabel: "Recital Memory",
     closeLabel: "Close",
+    homeFeatureTitle: "Featured Upcoming Recital",
+    homeFeatureText:
+      "Join us for an evening of student performances in a warm, recital-style setting. Families and friends are warmly welcome.",
+    homeFeatureCta: "See Recital Details",
     upcoming: [
       {
         title: "Summer Studio Recital",
@@ -103,6 +107,7 @@ const en = {
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
         mapTitle: "Map for Summer Studio Recital",
+        hideAfter: "2026-06-08T00:00:00-04:00",
       },
     ],
     gallery: [
