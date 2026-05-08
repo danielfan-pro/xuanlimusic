@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import Hero from "@/components/hero";
 import SectionReveal from "@/components/section-reveal";
@@ -27,8 +28,23 @@ export default function HomePage() {
           <SectionReveal className="overflow-hidden rounded-[2.2rem] border border-[color:var(--line)] bg-white/84 shadow-[0_28px_70px_rgba(18,49,79,0.08)]">
             <div className="grid lg:grid-cols-[0.8fr_1.2fr]">
               <div className="flex min-h-[20rem] items-center justify-center bg-[linear-gradient(160deg,rgba(154,198,228,0.45),rgba(18,49,79,0.16))] p-8">
-                <div className="flex h-full min-h-[16rem] w-full items-center justify-center rounded-[1.8rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,248,250,0.76))] p-8 text-center font-heading text-3xl text-[color:var(--navy)]">
-                  {t.recitals.posterPlaceholder}
+                <div className="relative flex h-full min-h-[16rem] w-full items-center justify-center overflow-hidden rounded-[1.8rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,248,250,0.76))] p-4 sm:p-6">
+                  {featuredRecital.posterImage ? (
+                    <div className="relative h-[22rem] w-full sm:h-[24rem]">
+                      <Image
+                        src={featuredRecital.posterImage}
+                        alt={featuredRecital.title}
+                        fill
+                        className="object-contain"
+                        sizes="(max-width: 1024px) 100vw, 36vw"
+                        priority
+                      />
+                    </div>
+                  ) : (
+                    <div className="flex h-full w-full items-center justify-center text-center font-heading text-3xl text-[color:var(--navy)]">
+                      {t.recitals.posterPlaceholder}
+                    </div>
+                  )}
                 </div>
               </div>
               <div className="flex flex-col p-8 lg:p-10">

@@ -13,12 +13,13 @@ const en = {
   },
   hero: {
     eyebrow: "Private strings and piano instruction",
-    title: "Xuanli Music",
+    headerLabel: "XUANLI SCHOOL OF MUSIC",
+    title: "Xuanli School of Music",
     subtitle:
-      "A refined studio for thoughtful music study, guided by two retired professors who bring warmth, rigor, and artistry to every lesson.",
+      "A refined school for thoughtful music study, guided by two retired professors who bring warmth, rigor, and artistry to every lesson.",
     primaryCta: "Meet the Teachers",
     secondaryCta: "View Recitals",
-    mark: "Studio Mark",
+    mark: "School Mark",
     since: "Since 2023",
     highlights: [
       "Classical training rooted in academic excellence",
@@ -26,17 +27,17 @@ const en = {
       "A welcoming path toward recitals, auditions, and lifelong musicianship",
     ],
     logo: "Logo Placeholder",
-    studioCardTitle: "Xuanli Music Studio",
+    studioCardTitle: "Xuanli School of Music",
     studioCardText:
       "Strings, piano, recital preparation, audition guidance, and a thoughtful path for serious study.",
   },
   about: {
-    title: "About the Studio",
+    title: "About the School",
     intro:
-      "Xuanli Music offers a calm, deeply attentive environment where students can grow with discipline, curiosity, and joy.",
+      "Xuanli School of Music offers a calm, deeply attentive environment where students can grow with discipline, curiosity, and joy.",
     philosophyTitle: "Mission & Philosophy",
     philosophy:
-      "Our studio values careful listening, solid technique, musical imagination, and steady long-term development. Lessons are shaped around each student while preserving the seriousness and beauty of classical music study.",
+      "Our school values careful listening, solid technique, musical imagination, and steady long-term development. Lessons are shaped around each student while preserving the seriousness and beauty of classical music study.",
     values: [
       {
         title: "Scholarship",
@@ -55,11 +56,13 @@ const en = {
   teachers: {
     title: "Teachers",
     intro:
-      "Two experienced educators, one studio, and a shared commitment to serious yet nurturing music instruction.",
+      "Two experienced educators, one school, and a shared commitment to serious yet nurturing music instruction.",
     profiles: [
       {
         instrument: "Strings",
         name: "Professor Yanming Xu",
+        image: "/images/teachers/xu-yanming/headshot.jpg",
+        imagePosition: "center center",
         credentials: [
           "Retired university professor",
           "Specialist in violin, viola, and string pedagogy",
@@ -71,6 +74,8 @@ const en = {
       {
         instrument: "Piano",
         name: "Professor Wei Li",
+        image: "/images/teachers/li-wei/headshot.jpg",
+        imagePosition: "center 22%",
         credentials: [
           "Retired university professor",
           "Piano teacher with recital and grading preparation experience",
@@ -84,56 +89,75 @@ const en = {
   recitals: {
     title: "Recitals",
     intro:
-      "Studio performances celebrate preparation, growth, and the joy of sharing music with family and community.",
+      "School performances celebrate preparation, growth, and the joy of sharing music with family and community.",
     upcomingTitle: "Upcoming Recitals",
     pastTitle: "Past Recitals",
-    upcomingEventLabel: "Upcoming Event",
     dateLabel: "Date",
     timeLabel: "Time",
     addressLabel: "Address",
     posterPlaceholder: "Poster Placeholder",
     photoLabel: "Photo",
+    galleryLabel: "Gallery",
     memoryLabel: "Recital Memory",
     closeLabel: "Close",
     homeFeatureTitle: "Featured Upcoming Recital",
     homeFeatureText:
-      "Join us for an evening of student performances in a warm, recital-style setting. Families and friends are warmly welcome.",
+      "Join us for an evening of student performances in an intimate, recital-style setting. Families and friends are warmly welcome.",
     homeFeatureCta: "See Recital Details",
     upcoming: [
       {
-        title: "Summer Studio Recital",
+        title: "Summer School Recital",
         date: "Sunday, June 7, 2026",
-        time: "5:00 PM",
+        time: "5:30 PM",
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
-        mapTitle: "Map for Summer Studio Recital",
+        posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
+        mapTitle: "Map for Summer School Recital",
         hideAfter: "2026-06-08T00:00:00-04:00",
       },
     ],
-    gallery: [
+    pastRecitals: [
       {
-        title: "Winter Recital Finale",
-        caption: "Students gather after a celebratory seasonal performance.",
+        title: "Winter School Recital",
+        date: "Saturday, December 6, 2025",
+        venue: "Powers Music School",
+        summary: "A winter chamber music recital at Powers Music School featuring piano, violin, viola, zheng, and ensemble performances.",
+        posterImage: "/images/recitals/2025-winter-school-recital/poster.png",
+        photos: [
+          {
+            title: "Winter Recital Finale",
+            caption: "Students gather after a celebratory seasonal performance.",
+          },
+          {
+            title: "Piano Solo Spotlight",
+            caption: "A young pianist performing with focus and poise.",
+          },
+          {
+            title: "Violin Ensemble Moment",
+            caption: "School violinists sharing a chamber-style arrangement.",
+          },
+        ],
       },
       {
-        title: "Piano Solo Spotlight",
-        caption: "A young pianist performing with focus and poise.",
-      },
-      {
-        title: "Violin Ensemble Moment",
-        caption: "Studio violinists sharing a chamber-style arrangement.",
-      },
-      {
-        title: "Family Reception",
-        caption: "A warm post-recital gathering with families and guests.",
-      },
-      {
-        title: "Award Presentation",
-        caption: "Special recognition for consistent dedication and growth.",
-      },
-      {
-        title: "Backstage Preparation",
-        caption: "A quiet moment of preparation before taking the stage.",
+        title: "Spring Honors Showcase",
+        date: "Sunday, March 9, 2025",
+        venue: "First Parish Malden",
+        summary: "A spring teaching recital at First Parish Malden featuring student performances with Professors Yanming Xu and Wei Li.",
+        posterImage: "/images/recitals/2025-spring-honors-showcase/poster.png",
+        photos: [
+          {
+            title: "Family Reception",
+            caption: "A warm post-recital gathering with families and guests.",
+          },
+          {
+            title: "Award Presentation",
+            caption: "Special recognition for consistent dedication and growth.",
+          },
+          {
+            title: "Backstage Preparation",
+            caption: "A quiet moment of preparation before taking the stage.",
+          },
+        ],
       },
     ],
   },
@@ -180,7 +204,8 @@ const en = {
     },
   },
   footer: {
-    text: "Private strings and piano lessons with academic depth and personal care.",
+    brandName: "Xuanli School of Music",
+    text: "Private strings and piano instruction with academic depth and personal care.",
   },
 };
 

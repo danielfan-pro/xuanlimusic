@@ -38,7 +38,7 @@ export default function Header() {
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted)]">
-              Strings & Piano Studio
+              {t.hero.headerLabel}
             </p>
           </div>
         </Link>

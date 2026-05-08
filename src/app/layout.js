@@ -3,8 +3,8 @@ import { LanguageProvider } from "@/components/language-provider";
 import PageShell from "@/components/page-shell";
 
 export const metadata = {
-  title: "Xuanli Music",
-  description: "Private strings and piano studio with a classic, elegant bilingual website shell.",
+  title: "Xuanli School of Music",
+  description: "Private strings and piano school with a classic, elegant bilingual website shell.",
 };
 
 export default function RootLayout({ children }) {

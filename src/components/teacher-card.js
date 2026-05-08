@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import SectionReveal from "@/components/section-reveal";
 
 export default function TeacherCard({ teacher, index }) {
@@ -10,8 +11,21 @@ export default function TeacherCard({ teacher, index }) {
     >
       <div className="grid lg:grid-cols-[0.85fr_1.15fr]">
         <div className="flex min-h-[21rem] items-center justify-center bg-[linear-gradient(160deg,rgba(201,225,241,0.9),rgba(18,49,79,0.16))] p-8">
-          <div className="flex h-52 w-52 items-center justify-center rounded-full border border-white/80 bg-white/90 text-center font-heading text-2xl text-[color:var(--navy)] shadow-[0_18px_40px_rgba(18,49,79,0.12)]">
-            Headshot
+          <div className="relative h-56 w-56 overflow-hidden rounded-full border border-white/80 bg-white/90 shadow-[0_18px_40px_rgba(18,49,79,0.12)]">
+            {teacher.image ? (
+              <Image
+                src={teacher.image}
+                alt={teacher.name}
+                fill
+                className="object-cover"
+                style={{ objectPosition: teacher.imagePosition || "center center" }}
+                sizes="(max-width: 1024px) 224px, 224px"
+              />
+            ) : (
+              <div className="flex h-full w-full items-center justify-center text-center font-heading text-2xl text-[color:var(--navy)]">
+                Headshot
+              </div>
+            )}
           </div>
         </div>
         <div className="p-8 lg:p-10">

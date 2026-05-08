@@ -1,9 +1,9 @@
 "use client";
 
-import GalleryLightbox from "@/components/gallery-lightbox";
 import PageBanner from "@/components/page-banner";
-import RecitalCard from "@/components/recital-card";
+import PastRecitalsGallery from "@/components/past-recitals-gallery";
 import SectionReveal from "@/components/section-reveal";
+import UpcomingRecitalPoster from "@/components/upcoming-recital-poster";
 import { useLanguage } from "@/components/language-provider";
 
 function isRecitalUpcoming(recital) {
@@ -18,7 +18,21 @@ export default function RecitalsPage() {
   const { t } = useLanguage();
   const recitalItems = t.recitals.upcoming;
   const upcomingRecitals = recitalItems.filter(isRecitalUpcoming);
-  const pastRecitals = recitalItems.filter((recital) => !isRecitalUpcoming(recital));
+  const archivedUpcomingRecitals = recitalItems
+    .filter((recital) => !isRecitalUpcoming(recital))
+    .map((recital) => ({
+      title: recital.title,
+      date: recital.date,
+      venue: recital.venue,
+      summary: `${recital.time} · ${recital.venue}`,
+      photos: [
+        {
+          title: t.recitals.posterPlaceholder,
+          caption: `${recital.title} · ${recital.time}`,
+        },
+      ],
+    }));
+  const pastRecitals = [...archivedUpcomingRecitals, ...t.recitals.pastRecitals];
 
   return (
     <>
@@ -30,7 +44,7 @@ export default function RecitalsPage() {
           </SectionReveal>
           <div className="grid gap-8">
             {upcomingRecitals.map((recital, index) => (
-              <RecitalCard key={recital.title} recital={recital} index={index} />
+              <UpcomingRecitalPoster key={recital.title} recital={recital} index={index} />
             ))}
           </div>
         </section>
@@ -40,13 +54,8 @@ export default function RecitalsPage() {
           <h2 className="font-heading text-5xl text-[color:var(--navy)]">{t.recitals.pastTitle}</h2>
         </SectionReveal>
         {pastRecitals.length ? (
-          <div className="mb-10 grid gap-8">
-            {pastRecitals.map((recital, index) => (
-              <RecitalCard key={recital.title} recital={recital} index={index} />
-            ))}
-          </div>
+          <PastRecitalsGallery items={pastRecitals} />
         ) : null}
-        <GalleryLightbox items={t.recitals.gallery} />
       </section>
     </>
   );
