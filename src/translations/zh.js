@@ -134,7 +134,7 @@ const zh = {
         ],
       },
       {
-        title: "春季荣誉展示音乐会",
+        title: "春季学院音乐会",
         date: "2025年3月9日 星期日",
         venue: "First Parish Malden",
         summary: "一场在 First Parish Malden 举办的春季教学音乐会，呈现由许燕明教授与李巍教授指导的学生演出。",

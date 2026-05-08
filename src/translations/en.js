@@ -139,7 +139,7 @@ const en = {
         ],
       },
       {
-        title: "Spring Honors Showcase",
+        title: "Spring School Recital",
         date: "Sunday, March 9, 2025",
         venue: "First Parish Malden",
         summary: "A spring teaching recital at First Parish Malden featuring student performances with Professors Yanming Xu and Wei Li.",
