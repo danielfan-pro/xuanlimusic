@@ -16,7 +16,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <PageBanner title={t.contact.title} intro={t.contact.intro} />
+      <PageBanner title={t.contact.title} intro={t.contact.intro} introWidthClass="max-w-5xl" />
       <section className="mx-auto grid max-w-7xl gap-8 px-6 pb-20 lg:grid-cols-[0.8fr_1.2fr] lg:px-10 lg:pb-28">
         <SectionReveal className="rounded-[2rem] border border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(154,198,228,0.22),rgba(255,255,255,0.78))] p-8 shadow-[0_28px_70px_rgba(18,49,79,0.08)] lg:p-10">
           <h2 className="font-heading text-4xl text-[color:var(--navy)]">{t.contact.title}</h2>
