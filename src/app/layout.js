@@ -1,4 +1,5 @@
 import "@/app/globals.css";
+import { Analytics } from "@vercel/analytics/next";
 import { LanguageProvider } from "@/components/language-provider";
 import PageShell from "@/components/page-shell";
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <LanguageProvider>
           <PageShell>{children}</PageShell>
         </LanguageProvider>
+        <Analytics />
       </body>
     </html>
   );
