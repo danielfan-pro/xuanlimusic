@@ -14,14 +14,14 @@ export default function UpcomingRecitalPoster({ recital, index = 0 }) {
     >
       <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
         <div className="flex min-h-[28rem] items-center justify-center bg-[linear-gradient(160deg,rgba(154,198,228,0.55),rgba(18,49,79,0.22))] p-8 lg:min-h-[36rem]">
-          <div className="relative flex h-full min-h-[22rem] w-full items-center justify-center overflow-hidden rounded-[1.9rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(245,248,250,0.76))] p-4 shadow-[0_18px_40px_rgba(18,49,79,0.08)] sm:p-6">
+          <div className="relative flex h-full min-h-[22rem] w-full items-center justify-center">
             {recital.posterImage ? (
-              <div className="relative h-[24rem] w-full sm:h-[28rem] lg:h-[32rem]">
+              <div className="relative aspect-[2/3] w-full max-w-[18rem] overflow-hidden rounded-[1.35rem] shadow-[0_18px_40px_rgba(18,49,79,0.16)] sm:max-w-[20rem] lg:max-w-[22rem]">
                 <Image
                   src={recital.posterImage}
                   alt={recital.title}
                   fill
-                  className="object-contain"
+                  className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   priority={index === 0}
                 />

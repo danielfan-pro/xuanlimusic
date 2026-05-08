@@ -30,14 +30,14 @@ export default function PastRecitalsGallery({ items }) {
               className="group w-full overflow-hidden rounded-[1.9rem] border border-[color:var(--line)] bg-white/82 text-left shadow-[0_22px_55px_rgba(18,49,79,0.07)] transition hover:-translate-y-1"
             >
               <div className="flex min-h-[16rem] items-center justify-center bg-[linear-gradient(160deg,rgba(154,198,228,0.55),rgba(18,49,79,0.22))] p-4 sm:p-6">
-                <div className="relative flex h-full min-h-[14rem] w-full items-center justify-center overflow-hidden rounded-[1.6rem] border border-white/70 bg-white/90 p-4">
+                <div className="relative min-h-[14rem] w-full overflow-hidden rounded-[1.6rem] bg-[rgba(255,255,255,0.14)]">
                   {item.posterImage ? (
                     <div className="relative h-[14rem] w-full sm:h-[16rem]">
                       <Image
                         src={item.posterImage}
                         alt={item.title}
                         fill
-                        className="object-contain"
+                        className="object-cover"
                         sizes="(max-width: 1024px) 100vw, 42vw"
                       />
                     </div>
@@ -97,10 +97,22 @@ export default function PastRecitalsGallery({ items }) {
 
               <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[1.15fr_0.85fr] lg:p-8">
                 <div className="grid gap-4">
-                  <div className="flex min-h-[18rem] items-end rounded-[1.8rem] bg-[linear-gradient(160deg,rgba(154,198,228,0.65),rgba(18,49,79,0.24))] p-6 sm:min-h-[28rem]">
-                    <div className="rounded-full border border-white/65 bg-white/82 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--navy)]">
-                      {activePhoto ? activePhoto.title : t.recitals.photoLabel}
-                    </div>
+                  <div className="overflow-hidden rounded-[1.8rem] bg-[linear-gradient(160deg,rgba(154,198,228,0.65),rgba(18,49,79,0.24))] sm:min-h-[28rem]">
+                    {activePhoto?.image ? (
+                      <div className="relative h-[18rem] w-full overflow-hidden sm:h-[28rem]">
+                        <Image
+                          src={activePhoto.image}
+                          alt={activePhoto.title}
+                          fill
+                          className="object-contain"
+                          sizes="(max-width: 1024px) 100vw, 55vw"
+                        />
+                      </div>
+                    ) : (
+                      <div className="rounded-full border border-white/65 bg-white/82 px-4 py-2 text-xs uppercase tracking-[0.3em] text-[color:var(--navy)]">
+                        {activePhoto ? activePhoto.title : t.recitals.photoLabel}
+                      </div>
+                    )}
                   </div>
                   {activeRecital.photos?.length ? (
                     <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
@@ -115,7 +127,22 @@ export default function PastRecitalsGallery({ items }) {
                               : "border-[color:var(--line)] bg-white/85 text-[color:var(--muted)] hover:bg-[color:var(--surface-soft)]"
                           }`}
                         >
-                          {photo.title}
+                          {photo.image ? (
+                            <div className="grid gap-2">
+                              <div className="relative h-14 w-full overflow-hidden rounded-lg bg-[color:var(--surface-soft)]">
+                                <Image
+                                  src={photo.image}
+                                  alt={photo.title}
+                                  fill
+                                  className="object-cover"
+                                  sizes="160px"
+                                />
+                              </div>
+                              <span>{photo.title}</span>
+                            </div>
+                          ) : (
+                            photo.title
+                          )}
                         </button>
                       ))}
                     </div>
