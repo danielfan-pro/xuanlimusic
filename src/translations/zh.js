@@ -2,6 +2,7 @@ const zh = {
   languageLabel: "中文",
   common: {
     explore: "查看详情",
+    viewProgram: "查看节目单",
   },
   nav: {
     home: "首页",
@@ -96,6 +97,8 @@ const zh = {
     galleryLabel: "图集",
     memoryLabel: "音乐会回忆",
     closeLabel: "关闭",
+    programTitle: "音乐会节目单",
+    programIntro: "查看即将举行音乐会的完整节目单。",
     homeFeatureTitle: "主页精选音乐会",
     homeFeatureText: "欢迎参加这场温馨而正式的学生音乐会，诚挚邀请家人和朋友一同前来欣赏演出。",
     homeFeatureCta: "查看音乐会详情",
@@ -107,6 +110,7 @@ const zh = {
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
+        programImage: "/images/recitals/2026-summer-school-recital/program.png",
         mapTitle: "夏季学院音乐会地图",
         hideAfter: "2026-06-08T00:00:00-04:00",
       },

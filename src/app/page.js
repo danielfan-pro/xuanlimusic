@@ -73,12 +73,22 @@ export default function HomePage() {
                   </div>
                 </div>
                 <div className="mt-8">
-                  <Link
-                    href="/recitals"
-                    className="inline-flex rounded-full bg-[color:var(--navy)] px-6 py-3 text-sm uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5"
-                  >
-                    {t.recitals.homeFeatureCta}
-                  </Link>
+                  <div className="flex flex-wrap gap-4">
+                    <Link
+                      href="/recitals"
+                      className="inline-flex rounded-full bg-[color:var(--navy)] px-6 py-3 text-sm uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5"
+                    >
+                      {t.recitals.homeFeatureCta}
+                    </Link>
+                    {featuredRecital.programImage ? (
+                      <Link
+                        href="/recitals#program"
+                        className="inline-flex rounded-full border border-[color:var(--line)] bg-white/85 px-6 py-3 text-sm uppercase tracking-[0.18em] text-[color:var(--navy)] transition hover:-translate-y-0.5"
+                      >
+                        {t.common.viewProgram}
+                      </Link>
+                    ) : null}
+                  </div>
                 </div>
               </div>
             </div>

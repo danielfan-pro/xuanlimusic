@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function SectionReveal({ children, className = "", delay = 0 }) {
+export default function SectionReveal({ children, className = "", delay = 0, ...props }) {
   const ref = useRef(null);
   const [visible, setVisible] = useState(false);
 
@@ -29,6 +29,7 @@ export default function SectionReveal({ children, className = "", delay = 0 }) {
   return (
     <div
       ref={ref}
+      {...props}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
       style={{ transitionDelay: `${delay}ms` }}
     >

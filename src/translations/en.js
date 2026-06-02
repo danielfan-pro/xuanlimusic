@@ -2,6 +2,7 @@ const en = {
   languageLabel: "EN",
   common: {
     explore: "Explore",
+    viewProgram: "View Program",
   },
   nav: {
     home: "Home",
@@ -100,6 +101,8 @@ const en = {
     galleryLabel: "Gallery",
     memoryLabel: "Recital Memory",
     closeLabel: "Close",
+    programTitle: "Concert Program",
+    programIntro: "Browse the full program for the upcoming concert.",
     homeFeatureTitle: "Featured Upcoming Recital",
     homeFeatureText:
       "Join us for an evening of student performances in an intimate, recital-style setting. Families and friends are warmly welcome.",
@@ -112,6 +115,7 @@ const en = {
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
+        programImage: "/images/recitals/2026-summer-school-recital/program.png",
         mapTitle: "Map for Summer School Recital",
         hideAfter: "2026-06-08T00:00:00-04:00",
       },
