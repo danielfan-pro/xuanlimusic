@@ -34,17 +34,17 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-white/50 bg-[color:var(--surface-glass)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-10">
         <Link href="/" className="group flex items-center gap-4">
-          <div className="relative h-16 w-12 overflow-hidden rounded-[0.9rem] border border-[color:var(--line)] bg-white/85 shadow-sm">
+          <div className="relative h-14 w-10 overflow-hidden rounded-[0.85rem] border border-[color:var(--line)] bg-white/85 shadow-sm sm:h-16 sm:w-12">
             <Image
               src="/images/logo.jpg"
               alt="Xuanli School of Music logo"
               fill
               className="object-cover"
-              sizes="48px"
+              sizes="(max-width: 640px) 40px, 48px"
               priority
             />
           </div>
-          <div>
+          <div className="hidden sm:block">
             <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted)]">
               {t.hero.headerLabel}
             </p>

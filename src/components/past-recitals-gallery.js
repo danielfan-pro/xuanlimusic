@@ -77,33 +77,35 @@ export default function PastRecitalsGallery({ items }) {
               className="mx-auto w-full max-w-6xl overflow-hidden rounded-[2rem] border border-white/20 bg-[color:var(--background)] shadow-[0_30px_120px_rgba(0,0,0,0.35)]"
               onClick={(event) => event.stopPropagation()}
             >
-              <div className="flex items-start justify-between gap-4 border-b border-[color:var(--line)] px-5 py-5 sm:px-6">
-                <div>
-                  <h4 className="font-heading text-3xl text-[color:var(--navy)] sm:text-4xl">
-                    {activeRecital.title}
-                  </h4>
-                  <p className="mt-2 text-sm leading-7 text-[color:var(--muted)]">
-                    {activeRecital.date} · {activeRecital.venue}
-                  </p>
-                </div>
-                <div className="flex shrink-0 flex-wrap items-center justify-end gap-3">
-                  {activeRecital.fullGalleryUrl ? (
-                    <a
-                      href={activeRecital.fullGalleryUrl}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex rounded-full bg-[color:var(--navy)] px-4 py-2 text-sm uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5"
+              <div className="border-b border-[color:var(--line)] px-5 py-5 sm:px-6">
+                <div className="flex flex-col gap-5 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0">
+                    <h4 className="font-heading text-3xl text-[color:var(--navy)] sm:text-4xl">
+                      {activeRecital.title}
+                    </h4>
+                    <p className="mt-2 text-sm leading-7 text-[color:var(--muted)]">
+                      {activeRecital.date} · {activeRecital.venue}
+                    </p>
+                  </div>
+                  <div className="flex w-full flex-col gap-3 sm:w-auto sm:shrink-0 sm:items-end">
+                    {activeRecital.fullGalleryUrl ? (
+                      <a
+                        href={activeRecital.fullGalleryUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="inline-flex w-full justify-center rounded-full bg-[color:var(--navy)] px-4 py-2 text-sm uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5 sm:w-auto"
+                      >
+                        {t.common.viewFullGallery}
+                      </a>
+                    ) : null}
+                    <button
+                      type="button"
+                      onClick={() => setActiveRecitalIndex(null)}
+                      className="inline-flex w-full justify-center rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--navy)] sm:w-auto"
                     >
-                      {t.common.viewFullGallery}
-                    </a>
-                  ) : null}
-                  <button
-                    type="button"
-                    onClick={() => setActiveRecitalIndex(null)}
-                    className="rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--navy)]"
-                  >
-                    {t.recitals.closeLabel}
-                  </button>
+                      {t.recitals.closeLabel}
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -127,30 +129,32 @@ export default function PastRecitalsGallery({ items }) {
                     )}
                   </div>
                   {activeRecital.photos?.length ? (
-                    <div className="grid grid-cols-3 gap-3 sm:grid-cols-4">
+                    <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
                       {activeRecital.photos.map((photo, index) => (
                         <button
                           key={photo.title}
                           type="button"
                           onClick={() => setActivePhotoIndex(index)}
-                          className={`min-h-[5.5rem] rounded-[1.2rem] border p-3 text-left text-xs leading-5 transition sm:min-h-[6.5rem] ${
+                          className={`flex min-h-[10.5rem] flex-col rounded-[1.2rem] border p-3 text-left text-xs leading-5 transition sm:min-h-[6.5rem] ${
                             activePhotoIndex === index
                               ? "border-[color:var(--navy)] bg-[rgba(18,49,79,0.08)] text-[color:var(--navy)]"
                               : "border-[color:var(--line)] bg-white/85 text-[color:var(--muted)] hover:bg-[color:var(--surface-soft)]"
                           }`}
                         >
                           {photo.image ? (
-                            <div className="grid gap-2">
-                              <div className="relative h-14 w-full overflow-hidden rounded-lg bg-[color:var(--surface-soft)]">
+                            <div className="flex h-full flex-col gap-3">
+                              <div className="relative h-16 w-full shrink-0 overflow-hidden rounded-lg bg-[color:var(--surface-soft)] sm:h-14">
                                 <Image
                                   src={photo.image}
                                   alt={photo.title}
                                   fill
-                                  className="object-cover"
+                                  className="object-cover object-center"
                                   sizes="160px"
                                 />
                               </div>
-                              <span>{photo.title}</span>
+                              <span className="line-clamp-4 text-[0.95rem] leading-9 sm:text-xs sm:leading-5">
+                                {photo.title}
+                              </span>
                             </div>
                           ) : (
                             photo.title
