@@ -110,7 +110,7 @@ const zh = {
         time: "下午 5:30",
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
-        summary: "这场室内乐音乐会汇集了学生独奏、合奏演出，以及师生与家庭共同分享的温暖时刻。",
+        summary: "这场室内乐音乐会汇集了学生独奏、二重奏、三重奏、合奏演出，以及师生与家庭共同分享的温暖时刻。",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
         coverImage: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
         programImage: "/images/recitals/2026-summer-school-recital/program.png",

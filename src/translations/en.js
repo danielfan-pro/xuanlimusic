@@ -115,7 +115,7 @@ const en = {
         time: "5:30 PM",
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
-        summary: "A chamber music concert featuring student solos, ensemble playing, and a warm gathering of families and teachers.",
+        summary: "A chamber music concert featuring student solos, duets, trios, ensemble playing, and a warm gathering of families and teachers.",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
         coverImage: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
         programImage: "/images/recitals/2026-summer-school-recital/program.png",
