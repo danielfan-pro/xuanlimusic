@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -33,8 +34,15 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-white/50 bg-[color:var(--surface-glass)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-4 lg:px-10">
         <Link href="/" className="group flex items-center gap-4">
-          <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[color:var(--line)] bg-white/80 text-center text-[0.65rem] uppercase tracking-[0.35em] text-[color:var(--navy)] shadow-sm">
-            XM
+          <div className="relative h-16 w-12 overflow-hidden rounded-[0.9rem] border border-[color:var(--line)] bg-white/85 shadow-sm">
+            <Image
+              src="/images/logo.jpg"
+              alt="Xuanli School of Music logo"
+              fill
+              className="object-cover"
+              sizes="48px"
+              priority
+            />
           </div>
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-[color:var(--muted)]">

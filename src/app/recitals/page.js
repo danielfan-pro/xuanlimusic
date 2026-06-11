@@ -24,14 +24,19 @@ export default function RecitalsPage() {
     .map((recital) => ({
       title: recital.title,
       date: recital.date,
-      venue: recital.venue,
-      summary: `${recital.time} · ${recital.venue}`,
-      photos: [
-        {
-          title: t.recitals.posterPlaceholder,
-          caption: `${recital.title} · ${recital.time}`,
-        },
-      ],
+      venue: recital.addressLine ? `${recital.venue}, ${recital.addressLine}` : recital.venue,
+      summary: recital.summary || `${recital.time} · ${recital.venue}`,
+      posterImage: recital.coverImage || recital.posterImage,
+      fullGalleryUrl: recital.fullGalleryUrl,
+      photos:
+        recital.photos?.length
+          ? recital.photos
+          : [
+              {
+                title: t.recitals.posterPlaceholder,
+                caption: `${recital.title} · ${recital.time}`,
+              },
+            ],
     }));
   const pastRecitals = [...archivedUpcomingRecitals, ...t.recitals.pastRecitals];
 

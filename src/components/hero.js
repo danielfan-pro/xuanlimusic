@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/components/language-provider";
 import SectionReveal from "@/components/section-reveal";
@@ -48,15 +49,21 @@ export default function Hero() {
             <div className="absolute -right-14 top-8 h-36 w-36 rounded-full bg-[rgba(154,198,228,0.35)] blur-3xl" />
             <div className="absolute -left-10 bottom-8 h-28 w-28 rounded-full bg-[rgba(18,49,79,0.12)] blur-2xl" />
             <div className="relative rounded-[2rem] border border-dashed border-[color:var(--line)] bg-[linear-gradient(180deg,rgba(244,249,252,0.95),rgba(255,251,241,0.95))] p-10">
-              <div className="flex min-h-[27rem] flex-col justify-between">
-                <div className="flex items-center justify-between text-xs uppercase tracking-[0.35em] text-[color:var(--muted)]">
-                  <span>{t.hero.mark}</span>
-                  <span>{t.hero.since}</span>
-                </div>
-                <div className="mx-auto flex h-52 w-52 items-center justify-center rounded-full border border-[color:var(--line)] bg-white/90 font-heading text-center text-3xl text-[color:var(--navy)] shadow-inner">
-                  {t.hero.logo}
+              <div className="flex min-h-[27rem] flex-col gap-8">
+                <div className="mx-auto h-64 w-48 overflow-hidden rounded-[1.8rem] border border-[color:var(--line)] bg-white/92 shadow-[0_18px_40px_rgba(18,49,79,0.12)]">
+                  <div className="relative h-full w-full p-3">
+                    <Image
+                      src="/images/logo.jpg"
+                      alt="Xuanli School of Music logo"
+                      fill
+                      className="object-contain"
+                      sizes="192px"
+                      priority
+                    />
+                  </div>
                 </div>
                 <div className="grid gap-4 rounded-[1.5rem] bg-[color:var(--surface-soft)] p-6">
+                  <p className="text-xs uppercase tracking-[0.35em] text-[color:var(--accent)]">{t.hero.since}</p>
                   <p className="font-heading text-2xl text-[color:var(--navy)]">{t.hero.studioCardTitle}</p>
                   <p className="text-sm leading-7 text-[color:var(--muted)]">{t.hero.studioCardText}</p>
                 </div>

@@ -86,13 +86,25 @@ export default function PastRecitalsGallery({ items }) {
                     {activeRecital.date} · {activeRecital.venue}
                   </p>
                 </div>
-                <button
-                  type="button"
-                  onClick={() => setActiveRecitalIndex(null)}
-                  className="rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--navy)]"
-                >
-                  {t.recitals.closeLabel}
-                </button>
+                <div className="flex shrink-0 flex-wrap items-center justify-end gap-3">
+                  {activeRecital.fullGalleryUrl ? (
+                    <a
+                      href={activeRecital.fullGalleryUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex rounded-full bg-[color:var(--navy)] px-4 py-2 text-sm uppercase tracking-[0.18em] !text-white transition hover:-translate-y-0.5"
+                    >
+                      {t.common.viewFullGallery}
+                    </a>
+                  ) : null}
+                  <button
+                    type="button"
+                    onClick={() => setActiveRecitalIndex(null)}
+                    className="rounded-full border border-[color:var(--line)] px-4 py-2 text-sm text-[color:var(--navy)]"
+                  >
+                    {t.recitals.closeLabel}
+                  </button>
+                </div>
               </div>
 
               <div className="grid gap-6 p-5 sm:p-6 lg:grid-cols-[1.15fr_0.85fr] lg:p-8">

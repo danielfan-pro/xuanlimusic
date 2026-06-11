@@ -3,6 +3,7 @@ const zh = {
   common: {
     explore: "查看详情",
     viewProgram: "查看节目单",
+    viewFullGallery: "查看完整相册",
   },
   nav: {
     home: "首页",
@@ -104,15 +105,60 @@ const zh = {
     homeFeatureCta: "查看音乐会详情",
     upcoming: [
       {
-        title: "夏季学院音乐会",
+        title: "2026夏季学院音乐会",
         date: "2026年6月7日 星期日",
         time: "下午 5:30",
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
+        summary: "这场室内乐音乐会汇集了学生独奏、合奏演出，以及师生与家庭共同分享的温暖时刻。",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
+        coverImage: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
         programImage: "/images/recitals/2026-summer-school-recital/program.png",
+        fullGalleryUrl: "https://photos.app.goo.gl/g1bowS3cgQCA7AMp9",
         mapTitle: "夏季学院音乐会地图",
         hideAfter: "2026-06-08T00:00:00-04:00",
+        photos: [
+          {
+            title: "弦乐学生合影",
+            image: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
+            caption: "音乐会结束后，许教授与弦乐学生们在舞台上留下欢快而珍贵的合影。",
+          },
+          {
+            title: "弦乐合奏",
+            image: "/images/recitals/2026-summer-school-recital/string-ensemble.jpg",
+            caption: "许教授带领学生弦乐合奏，呈现专注而细腻的室内乐片段。",
+          },
+          {
+            title: "钢琴学生合影",
+            image: "/images/recitals/2026-summer-school-recital/full-cast.jpg",
+            caption: "音乐会结束后，李巍教授与钢琴学生们共同留下温馨的纪念合影。",
+          },
+          {
+            title: "三重奏片段",
+            image: "/images/recitals/2026-summer-school-recital/young-trio.jpg",
+            caption: "三位年轻小提琴学生同台演出，展现明亮而可爱的合奏瞬间。",
+          },
+          {
+            title: "小提琴二重奏",
+            image: "/images/recitals/2026-summer-school-recital/duet-with-piano.jpg",
+            caption: "两位小提琴学生同台演奏二重奏，后方由钢琴学生担任伴奏。",
+          },
+          {
+            title: "小提琴独奏",
+            image: "/images/recitals/2026-summer-school-recital/violin-solo.jpg",
+            caption: "年轻小提琴学生以专注、自信和富有歌唱性的音色完成独奏演出。",
+          },
+          {
+            title: "钢琴独奏",
+            image: "/images/recitals/2026-summer-school-recital/piano-solo.jpg",
+            caption: "钢琴学生在三角钢琴前沉着专注地完成独奏片段。",
+          },
+          {
+            title: "教授演出片段",
+            image: "/images/recitals/2026-summer-school-recital/professor-duo.jpg",
+            caption: "许教授与李巍教授同台演出，为音乐会增添了精彩的教师示范环节。",
+          },
+        ],
       },
     ],
     pastRecitals: [
@@ -122,6 +168,7 @@ const zh = {
         venue: "Powers Music School, Belmont, MA",
         summary: "一场在 Powers Music School 举办的冬季室内乐音乐会，包含钢琴、小提琴、中提琴、古筝与合奏节目。",
         posterImage: "/images/recitals/2025-winter-school-recital/cover-group.jpg",
+        fullGalleryUrl: "https://photos.app.goo.gl/TZKpkARAsTtKRjj18",
         photos: [
           {
             title: "学院合影",

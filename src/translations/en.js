@@ -3,6 +3,7 @@ const en = {
   common: {
     explore: "Explore",
     viewProgram: "View Program",
+    viewFullGallery: "View Full Gallery",
   },
   nav: {
     home: "Home",
@@ -109,15 +110,60 @@ const en = {
     homeFeatureCta: "See Recital Details",
     upcoming: [
       {
-        title: "Summer School Recital",
+        title: "2026 Summer School Recital",
         date: "Sunday, June 7, 2026",
         time: "5:30 PM",
         venue: "Powers Music School",
         addressLine: "160 Lexington St, Belmont, MA 02478",
+        summary: "A chamber music concert featuring student solos, ensemble playing, and a warm gathering of families and teachers.",
         posterImage: "/images/recitals/2026-summer-school-recital/poster.png",
+        coverImage: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
         programImage: "/images/recitals/2026-summer-school-recital/program.png",
+        fullGalleryUrl: "https://photos.app.goo.gl/g1bowS3cgQCA7AMp9",
         mapTitle: "Map for Summer School Recital",
         hideAfter: "2026-06-08T00:00:00-04:00",
+        photos: [
+          {
+            title: "Strings Students Group Portrait",
+            image: "/images/recitals/2026-summer-school-recital/cover-group.jpg",
+            caption: "Professor Xu and the strings students gather for a joyful group portrait at the close of the evening.",
+          },
+          {
+            title: "String Ensemble",
+            image: "/images/recitals/2026-summer-school-recital/string-ensemble.jpg",
+            caption: "Professor Xu leads the string ensemble in a poised and attentive chamber performance.",
+          },
+          {
+            title: "Piano Students Group Portrait",
+            image: "/images/recitals/2026-summer-school-recital/full-cast.jpg",
+            caption: "Professor Li and her piano students gather for a group portrait after the concert.",
+          },
+          {
+            title: "Young Trio",
+            image: "/images/recitals/2026-summer-school-recital/young-trio.jpg",
+            caption: "Three young violinists share the stage in a bright and charming ensemble moment.",
+          },
+          {
+            title: "Violin Duet",
+            image: "/images/recitals/2026-summer-school-recital/duet-with-piano.jpg",
+            caption: "Two violinists perform a duet with piano accompaniment by a student pianist in the background.",
+          },
+          {
+            title: "Violin Solo",
+            image: "/images/recitals/2026-summer-school-recital/violin-solo.jpg",
+            caption: "A young violinist performs with focus, confidence, and an expressive singing tone.",
+          },
+          {
+            title: "Piano Solo",
+            image: "/images/recitals/2026-summer-school-recital/piano-solo.jpg",
+            caption: "A pianist performs with calm concentration at the grand piano.",
+          },
+          {
+            title: "Professors in Performance",
+            image: "/images/recitals/2026-summer-school-recital/professor-duo.jpg",
+            caption: "Professor Xu and Professor Li perform together in a faculty feature during the concert.",
+          },
+        ],
       },
     ],
     pastRecitals: [
@@ -127,6 +173,7 @@ const en = {
         venue: "Powers Music School, Belmont, MA",
         summary: "A winter chamber music recital at Powers Music School featuring piano, violin, viola, zheng, and ensemble performances.",
         posterImage: "/images/recitals/2025-winter-school-recital/cover-group.jpg",
+        fullGalleryUrl: "https://photos.app.goo.gl/TZKpkARAsTtKRjj18",
         photos: [
           {
             title: "Studio Group Portrait",
