@@ -22,7 +22,7 @@ const zh = {
     primaryCta: "认识老师",
     secondaryCta: "查看音乐会",
     mark: "学院标识",
-    since: "创立于 2023",
+    since: "创立于 2022",
     highlights: [
       "以学术背景与古典训练为基础",
       "为认真学习的学生提供个性化指导",

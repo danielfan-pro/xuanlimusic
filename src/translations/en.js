@@ -22,7 +22,7 @@ const en = {
     primaryCta: "Meet the Teachers",
     secondaryCta: "View Recitals",
     mark: "School Mark",
-    since: "Since 2023",
+    since: "Since 2022",
     highlights: [
       "Classical training rooted in academic excellence",
       "Individualized lessons for dedicated students",
